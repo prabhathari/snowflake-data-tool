@@ -1,4 +1,4 @@
-# Snowflake Data Tools
+# data-engineering-projects
 
 Simple Python utilities for Snowflake data operations.
 
@@ -27,7 +27,7 @@ Ingests CSV files into Snowflake as raw tables with VARIANT data type for flexib
 ## Project Structure
 
 ```
-snowflake-data-tools/
+snowflake-data-tool/
 ├── data/              # Your CSV files
 ├── ingestion/         # Data ingestion scripts
 │   ├── __init__.py   # Package marker

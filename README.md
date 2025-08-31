@@ -1,4 +1,4 @@
-# data-engineering-projects
+# Snowflake Data Tools
 
 Simple Python utilities for Snowflake data operations.
 
@@ -24,11 +24,14 @@ Simple Python utilities for Snowflake data operations.
 
 Ingests CSV files into Snowflake as raw tables with VARIANT data type for flexible processing.
 
+Auto-detects CSV columns and creates structured JSON objects in Snowflake.
+
 ## Project Structure
 
 ```
-snowflake-data-tool/
+snowflake-data-tools/
 ├── data/              # Your CSV files
+├── metadata/          # Table metadata configurations (optional)
 ├── ingestion/         # Data ingestion scripts
 │   ├── __init__.py   # Package marker
 │   └── ingest.py     # Main ingestion script
@@ -39,7 +42,25 @@ snowflake-data-tool/
 
 ## Configuration
 
-Update `.env` with your Snowflake connection details.
+Update `.env` with your Snowflake connection details:
+- SNOWFLAKE_USER
+- SNOWFLAKE_PASSWORD  
+- SNOWFLAKE_ACCOUNT
+- SNOWFLAKE_WAREHOUSE
+- SNOWFLAKE_DATABASE
+- SNOWFLAKE_SCHEMA
+
+## Example Output
+
+Your CSV data will be stored as structured VARIANT objects:
+```json
+{
+  "loan_id": "1001",
+  "customer_name": "John Doe",
+  "loan_amount": "25000",
+  "status": "Active"
+}
+```
 
 ## Extending
 

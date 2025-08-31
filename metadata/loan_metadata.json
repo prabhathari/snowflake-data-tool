@@ -1,0 +1,11 @@
+{
+  "table_name": "loan_raw",
+  "columns": [
+    "loan_id",
+    "customer_name", 
+    "loan_amount",
+    "interest_rate",
+    "start_date",
+    "status"
+  ]
+}

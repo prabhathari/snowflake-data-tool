@@ -1,0 +1,6 @@
+loan_id,customer_name,loan_amount,interest_rate,start_date,status
+1001,John Doe,25000,7.5,2023-01-15,Active
+1002,Jane Smith,15000,8.2,2023-03-20,Closed
+1003,Michael Brown,32000,6.9,2023-05-10,Active
+1004,Sarah Johnson,5000,9.1,2023-07-01,Active
+1005,David Lee,27000,7.0,2023-08-12,Defaulted

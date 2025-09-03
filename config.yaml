@@ -1,0 +1,48 @@
+# Snowflake Configuration
+snowflake:
+  database: "DEV"
+  warehouse: "COMPUTE_WH"
+  
+  # Schema Configuration
+  schemas:
+    raw: "RAW"
+    silver: "SILVER" 
+    gold: "GOLD"
+    
+  # Table Configurations
+  tables:
+    loan_contracts:
+      raw_table: "loan_raw"
+      silver_table: "loan_contracts_silver"
+      stored_procedure: "sp_process_loan_contracts_silver"
+      
+    # Future tables can be added here
+    customers:
+      raw_table: "customer_raw"  
+      silver_table: "customer_silver"
+      stored_procedure: "sp_process_customer_silver"
+      
+    transactions:
+      raw_table: "transaction_raw"
+      silver_table: "transaction_silver" 
+      stored_procedure: "sp_process_transaction_silver"
+
+# Environment-specific overrides (optional)
+environments:
+  dev:
+    database: "DEV"
+    schemas:
+      raw: "RAW"
+      silver: "SILVER"
+      
+  staging:
+    database: "STAGING"
+    schemas:
+      raw: "STAGING_RAW"
+      silver: "STAGING_SILVER"
+      
+  prod:
+    database: "PROD"
+    schemas:
+      raw: "PROD_RAW"
+      silver: "PROD_SILVER"
